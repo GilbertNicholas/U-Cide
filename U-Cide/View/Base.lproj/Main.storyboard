@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="U_Cide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Ypp-97-SN7">
+                                <rect key="frame" x="-57" y="0.0" width="499" height="565"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="J5i-15-Lh6">
+                                <rect key="frame" x="82" y="100" width="226" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You decide the future!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6g-Mj-URv">
+                                <rect key="frame" x="0.0" y="396" width="390" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                <color key="textColor" red="0.13333333333333333" green="0.15686274509803921" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap anywhere to start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ake-YF-YLR">
+                                <rect key="frame" x="0.0" y="670" width="390" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.44313725490196076" green="0.45882352941176469" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="0.82745098039215681" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4t1-zP-IVk" appends="YES" id="YS0-FT-JtE"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="G6g-Mj-URv" id="h3F-iq-rXG"/>
+                        <outlet property="labelStart" destination="ake-YF-YLR" id="mIw-qP-Udh"/>
+                        <segue destination="NR1-QA-OBq" kind="presentation" identifier="GamePageSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Qcf-h6-Hgx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4t1-zP-IVk">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="7cc-ee-HrW"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="130.76923076923077" y="101.65876777251184"/>
+        </scene>
+        <!--Game Page Controller-->
+        <scene sceneID="H6V-bB-HnU">
+            <objects>
+                <viewController id="NR1-QA-OBq" customClass="GamePageController" customModule="U_Cide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ac-9N-kBS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tf-u5-gjY">
+                                <rect key="frame" x="40" y="53" width="311" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TIZ-5Y-c5m">
+                                <rect key="frame" x="58" y="337" width="275" height="379"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nMk-5j-yYE">
+                                        <rect key="frame" x="35" y="85" width="205" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Option" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ld8-M9-OCf">
+                                        <rect key="frame" x="19" y="8" width="236" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9zQ-yl-7Ir" appends="YES" id="Kak-HP-HBP"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-Kc-MxN">
+                                <rect key="frame" x="58" y="761" width="275" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetBtnTapped:" destination="NR1-QA-OBq" eventType="touchUpInside" id="dGJ-Fa-YBF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s6l-bp-EMf"/>
+                        <color key="backgroundColor" red="1" green="0.82745098039215681" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K8p-Rn-mjd"/>
+                    <connections>
+                        <outlet property="cardView" destination="TIZ-5Y-c5m" id="9Dx-EV-5jx"/>
+                        <outlet property="imageView" destination="nMk-5j-yYE" id="JaW-Qj-rTp"/>
+                        <outlet property="labelQuestion" destination="3Tf-u5-gjY" id="kOu-ob-YuI"/>
+                        <outlet property="lblOption" destination="ld8-M9-OCf" id="11p-5N-NGX"/>
+                        <outlet property="resetBtn" destination="sfl-Kc-MxN" id="gQn-AE-Yfj"/>
+                        <segue destination="fKR-al-n8T" kind="presentation" identifier="tutorialSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="rJh-db-rj5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phS-cQ-i53" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="9zQ-yl-7Ir">
+                    <connections>
+                        <action selector="panCard:" destination="NR1-QA-OBq" id="MHh-nu-loR"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1107.6923076923076" y="101.65876777251184"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="wHc-cI-8wO">
+            <objects>
+                <viewController id="fKR-al-n8T" customClass="TutorialViewController" customModule="U_Cide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tnq-ua-rMA">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXW-N8-N47">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vpn-Wg-Fej">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAR-mf-5Np">
+                                            <rect key="frame" x="71" y="682" width="248" height="99"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ott-hc-KJu">
+                                            <rect key="frame" x="91" y="143" width="208" height="493"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <gestureRecognizers/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="mgD-00-rfV" appends="YES" id="tP4-FW-A8Y"/>
+                                    </connections>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TYv-5n-ZSS"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JXW-N8-N47" firstAttribute="leading" secondItem="TYv-5n-ZSS" secondAttribute="leading" id="SaK-Yf-4wD"/>
+                            <constraint firstAttribute="bottom" secondItem="JXW-N8-N47" secondAttribute="bottom" id="XzV-fL-s2i"/>
+                            <constraint firstItem="JXW-N8-N47" firstAttribute="top" secondItem="Tnq-ua-rMA" secondAttribute="top" id="ch1-5b-VdR"/>
+                            <constraint firstItem="JXW-N8-N47" firstAttribute="trailing" secondItem="TYv-5n-ZSS" secondAttribute="trailing" id="jSK-U3-69V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vUa-FC-Znf"/>
+                    <connections>
+                        <outlet property="tutorialImage" destination="ott-hc-KJu" id="z5x-Po-uSD"/>
+                        <outlet property="tutorialLabel" destination="aAR-mf-5Np" id="naL-e6-UBq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HSN-hA-xhz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="mgD-00-rfV">
+                    <connections>
+                        <action selector="tapTutorial:" destination="fKR-al-n8T" id="UTC-o9-aVo"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1107.6923076923076" y="821.80094786729853"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="780" height="1120"/>
+        <image name="Logo" width="165.33332824707031" height="165.33332824707031"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
